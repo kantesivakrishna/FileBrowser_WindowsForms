@@ -27,6 +27,7 @@ namespace FileBrowser
             using (FolderBrowserDialog fdb = new FolderBrowserDialog() { Description = "please select your folder" })
             {
                 if (fdb.ShowDialog() == DialogResult.OK)
+
                 {
                     txtPath.Text = fdb.SelectedPath;
                     foreach (string item in Directory.GetFiles(fdb.SelectedPath))
@@ -44,6 +45,7 @@ namespace FileBrowser
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            
         }
     }
 }
